@@ -1,17 +1,29 @@
-# warehouse_manager
+# Quản lý kho hàng (Flutter)
 
-A new Flutter project.
+Ứng dụng Android quản lý kho hàng cho cửa hàng nhỏ: đăng nhập, xem danh sách sản phẩm kèm thống kê, thêm sản phẩm, xem chi tiết, nhập thêm / bán / xóa. Dữ liệu lưu bằng SQLite (`warehouse.db`) qua `sqflite`.
 
-## Getting Started
+Tài khoản mẫu: `admin` / `123456`.
 
-This project is a starting point for a Flutter application.
+## Cấu trúc
 
-A few resources to get you started if this is your first Flutter project:
+```
+lib/
+├─ main.dart
+├─ models/product.dart            # Product, danh mục, ngưỡng sắp hết hàng
+├─ data/database_helper.dart      # SQLite: bảng users, products + các truy vấn
+├─ screens/
+│  ├─ login_screen.dart
+│  ├─ main_screen.dart            # thống kê + danh sách
+│  ├─ add_product_screen.dart
+│  └─ product_detail_screen.dart
+└─ utils/format.dart              # định dạng tiền VNĐ
+test/database_helper_test.dart    # unit test DatabaseHelper
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Chạy ứng dụng
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter pub get
+flutter run
+flutter test
+```

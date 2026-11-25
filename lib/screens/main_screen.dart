@@ -118,7 +118,8 @@ class _StatsCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.all(12),
       color: scheme.primaryContainer,
-      child: Padding(
+      child: Container(
+        width: double.infinity,
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
