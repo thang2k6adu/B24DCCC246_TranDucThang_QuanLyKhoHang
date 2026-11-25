@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screens/login_screen.dart';
+
 void main() {
   runApp(const WarehouseApp());
 }
@@ -16,9 +18,7 @@ class WarehouseApp extends StatelessWidget {
         colorSchemeSeed: Colors.teal,
         useMaterial3: true,
       ),
-      home: const Scaffold(
-        body: Center(child: Text('Quản lý kho hàng')),
-      ),
+      home: const LoginScreen(),
     );
   }
 }
